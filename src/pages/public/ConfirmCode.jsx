@@ -8,7 +8,7 @@ function ConfirmCode() {
     let location = useLocation()
 
     // const navigate = useNavigate();
-    const { loginStatus, setloginStatus } = useContext(authContext);
+    // const { loginStatus, setloginStatus } = useContext(authContext);
     const [confirmCode, setconfirmCode] = useState('');
 
     const confirm = () => {
@@ -17,7 +17,7 @@ function ConfirmCode() {
             .then(res => {
         
                 localStorage.setItem('token', res.token);
-                setloginStatus(true);
+                // setloginStatus(true);
             })
             .catch(err => {
                 alert('Confirm Code Error!!');
